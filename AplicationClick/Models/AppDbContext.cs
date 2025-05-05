@@ -8,6 +8,9 @@ namespace AplicationClick.Models
         {
         }
         public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Imovel> Imoveis { get; set; }  
+
     }
 }
     

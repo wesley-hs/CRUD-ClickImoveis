@@ -102,8 +102,26 @@ namespace AplicationClick.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
 
+        }
+        public async Task<IActionResult> Relatorio(int? id)
+        {
+            if (id == null)           
+                return NotFound();
 
+            var usuario = await _context.Usuarios.FindAsync(id);
+
+            if (usuario == null)
+                return NotFound();
+
+            var imoveis = await _context.Imoveis
+                .Where(i => i.UsuarioId == id)
+                .OrderByDescending(i => i.DataCadastro)
+                .ToListAsync();
+
+            ViewBag.Usuario = usuario;
+
+            return View(imoveis);
         }
     }
-}
+}   
     

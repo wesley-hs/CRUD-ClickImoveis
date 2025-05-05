@@ -32,5 +32,7 @@ namespace AplicationClick.Models
         public string Cep { get; set; }
 
         public string Telefone { get; set; }
+
+        public ICollection<Imovel> Imoveis { get; set; }
     }
 }

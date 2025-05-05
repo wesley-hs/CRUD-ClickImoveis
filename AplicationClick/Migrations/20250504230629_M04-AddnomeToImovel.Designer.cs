@@ -4,6 +4,7 @@ using AplicationClick.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AplicationClick.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250504230629_M04-AddnomeToImovel")]
+    partial class M04AddnomeToImovel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,9 +47,6 @@ namespace AplicationClick.Migrations
 
                     b.Property<string>("Complemento")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DataCadastro")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
