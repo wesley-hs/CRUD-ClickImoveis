@@ -31,6 +31,7 @@ namespace AplicationClick.Models
         public int UsuarioId { get; set; }             // FK
         public Usuario Usuario { get; set; }           // Navegação
         public decimal Total { get; internal set; }
+       
     }
     public enum TipoImovel
     {

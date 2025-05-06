@@ -20,3 +20,25 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+h1 {
+    font-size: 25px;
+}
+
+a {
+    width: auto;
+    
+}
+
+table {
+    background-color: white;
+}
+
+form-group {
+    width: 100;
+}
+
+
+
+
+
